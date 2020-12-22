@@ -13,17 +13,14 @@
        <input class="p-1.5 col-span-2 rounded" placeholder="Search something..."> </input><span class="p-1"></span><button class="rounded bg-white p-1.5">Search</button>
             </div>			
 		</div>
-          <div class="w-1/4 md:w-auto md:flex text-right">
+
+		          <div class="w-1/4 md:w-auto md:flex text-right">
             <div>
-              <img class="inline-block h-8 w-8 rounded-full" src="<?php print $user->avatar ?>" alt="">
-            </div>
-	
-            <div class="hidden md:block md:flex md:items-center ml-2">
-              <span class="text-white text-sm mr-1"><?php print $user->name ?>
-			  </span>
+              <button class="rounded bg-white p-1.5">Sign up</button>
             </div>
 			
 		</div>
+		
         </div>
       </div>
     </div>
