@@ -1,0 +1,1 @@
+                           <input class="p-1.5 col-span-2 rounded align-bottom bg-gray-50 rounded-md p-1.5  pl-10 pr-3 focus:bg-gray-100 text-sm py-2 focus:outline-none rounded-sm" name="post" placeholder="What's poppin'?"> </input>
