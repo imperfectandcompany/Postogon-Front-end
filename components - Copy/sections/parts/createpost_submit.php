@@ -1,0 +1,1 @@
+                        <button class="rounded bg-red-500 p-3 col-span-2 text-white">Share</button>

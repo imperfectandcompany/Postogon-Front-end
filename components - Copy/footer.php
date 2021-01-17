@@ -5,7 +5,7 @@
                      <div class="text-gray-500 text-center md:mr-4">&copy; 2020 Postogon</div>
                   </div>
                   <div class="text-center md:text-left py-3 py-4 border-b md:border-b-0">
-                     <a href="#" class="inline-block leading-tight bg-red-500 border hover:bg-red-600 px-3 py-2 text-white rounded">More</a>
+                     <a href="#" class="inline-block leading-tight bg-red-500 border hover:bg-red-600 px-3 py-2 text-white rounded">Refresh</a>
                   </div>
                   <div class="md:flex md:flex-row-reverse items-center py-4">
                      <div class="text-center mb-4 md:mb-0 md:flex">

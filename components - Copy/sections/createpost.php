@@ -7,9 +7,6 @@
                   </div>
                   <div class="w-3/5 bg-white border-t border-b sm:border-l sm:border-r sm:rounded shadow text-center py-8">
                      <form>
-<textarea class="resize border rounded focus:outline-none focus:shadow-outline"></textarea>
-
-
                         <div class="text-grey-darker mb-2">
 						<?php part("createpost_user");?>						
 						<?php part("createpost_content");?>

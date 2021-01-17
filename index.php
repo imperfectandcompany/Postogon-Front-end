@@ -4,12 +4,13 @@
 <!doctype html>
 <html lang="en">
    <!-- head -->
-   <?php view("head"); ?> 
+   <?php view("head"); ?>
    <body>
       <div class="font-sans bg-gray-100 flex flex-col min-h-screen w-full">
          <?php view("nav"); ?> 
          <!-- body -->
-         <?php view("body"); ?> 
+		 <?php view("body");?>
+		 
          <!-- Footer -->
          <?php view("footer");?>
          <!-- control panel -->
