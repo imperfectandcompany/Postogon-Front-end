@@ -2,7 +2,7 @@
 
 <div  class="flex mb-6">
                   <div class="w-1/5 text-center py-8">
-                     <div class="text-grey-darker mb-2">
+                     <div class="text-grey-darker px-2 mb-2">
                         <span class="text-3xl"></span>
                      </div>
                   </div>
@@ -42,9 +42,14 @@
 	  
       <div>
 
-		  
-        <p class="text-blue-500 font-bold">Profile</p>
-		
+		  <div class="flex items-center">
+        <p class="text-blue-500 mr-1 font-bold">Profile</p><svg xmlns="http://www.w3.org/2000/svg" class="h-6 py-1 title-font leading-none fill-current cursor-pointer transition text-gray-500 hover:text-gray-700" viewBox="1 -18 511.999 511">
+  <defs/>
+  <path d="M208.113 319.57c0 11.371 9.246 20.618 20.617 20.618h94.934c11.371 0 20.621-9.25 20.621-20.618v-95.554H208.113zm53.086-52.558c0-8.285 6.715-15 15-15 8.281 0 15 6.715 15 15v30.18c0 8.285-6.719 15-15 15-8.285 0-15-6.715-15-15zm0 0"/>
+  <path d="M442.973 70.082C398.433 25.211 339.203.5 276.199.5c-63.004 0-122.234 24.71-166.777 69.582-44.512 44.84-69.024 104.453-69.024 167.856 0 36.714 8.512 73.175 24.664 105.828-7.738 29.07-28.375 53.222-56.03 65.226-7.598 3.297-11.087 12.133-7.79 19.73.66 1.52 1.54 2.872 2.586 4.04 19.942 22.836 48.676 35.925 78.867 35.925 26.508 0 51.739-10.007 71-27.828 36.86 22.621 78.946 34.516 122.504 34.516 63.004 0 122.235-24.71 166.774-69.582C487.484 360.953 512 301.34 512 237.937s-24.516-123.015-69.027-167.855zM374.285 319.57c0 27.914-22.707 50.618-50.62 50.618H228.73c-27.91 0-50.617-22.708-50.617-50.618V214.762c0-11.438 9.305-20.746 20.746-20.746h17.172v-40.164c0-33.176 26.992-60.168 60.168-60.168 33.172 0 60.164 26.992 60.164 60.168v40.164h17.176c11.438 0 20.746 9.308 20.746 20.746zm0 0"/>
+  <path d="M306.363 153.852c0-16.633-13.531-30.168-30.164-30.168-16.633 0-30.168 13.53-30.168 30.168v40.164h60.332zm0 0"/>
+</svg>
+		</div>
 
 		  
         <div class="flex items-center text-xs text-gray-600">
@@ -56,17 +61,20 @@
       </div>
 	  
 
-	  
+			<!-- more options -->
 		   <div class="flex-shrink-0 flex flex-col ml-auto text-center leading-none">
-            <span class=" text-lg font-bold border-gray-200">20</span>
-            <span class="font-medium text-sm text-red-400 title-font leading-none">Sep</span>
+		         <div x-data="{ open: false }">
+		   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 title-font leading-none fill-current cursor-pointer transition text-gray-500 hover:text-gray-700" viewBox="0 0 60 60" @click="open = !open" @click.away="open = false" :class="{'transform transition duration-300 text-gray-700': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/></svg>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="pl-40 left-60 absolute w-60 px-5 py-3 dark:bg-gray-800 bg-white opacity-100 rounded-lg shadow border dark:border-transparent mt-1">
+        </div>
+		</div>
           </div>
 	  
     </div>
     <div class="mt-4 mb-4">
-      <p class="text-gray-600 pl-5 text-sm">
+      <p class="text-gray-600 pl-5  text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit 
+        cursus ornare nibh, sit
       </p>
     </div>
 	
@@ -90,7 +98,7 @@
                 </svg>
                <span>12</span>
             </div>
-            <div class="flex mr-2 text-gray-700 text-sm">
+            <div class="flex mr-1 text-gray-700 text-sm">
                <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
                </svg>
@@ -130,7 +138,7 @@
   </div>
   
                   <div class="w-1/5 text-center py-8">
-                     <div class="text-grey-darker mb-2">
+                     <div class="text-grey-darker px-2 mb-2">
                         <span class="text-3xl"></span>
                      </div>
                   </div>  

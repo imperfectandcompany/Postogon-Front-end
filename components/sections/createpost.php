@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
             <div class="mb-6">
                <div class="flex">
                   <div class="w-1/5 text-center py-8">
