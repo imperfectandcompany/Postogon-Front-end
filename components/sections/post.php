@@ -6,7 +6,7 @@
                         <span class="text-3xl"></span>
                      </div>
                   </div>
-  <div class="bg-white md:w-3/5 p-6 rounded-lg shadow-md">
+  <div class="bg-white md:w-3/5 p-6 rounded-lg shadow-sm">
   
     <div class="flex">
 	
@@ -64,9 +64,8 @@
 			<!-- more options -->
 		   <div class="flex-shrink-0 flex flex-col ml-auto text-center leading-none">
 		         <div x-data="{ open: false }">
-		   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 title-font leading-none fill-current cursor-pointer transition text-gray-500 hover:text-gray-700" viewBox="0 0 60 60" @click="open = !open" @click.away="open = false" :class="{'transform transition duration-300 text-gray-700': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/></svg>
-        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="pl-40 left-60 absolute w-60 px-5 py-3 dark:bg-gray-800 bg-white opacity-100 rounded-lg shadow border dark:border-transparent mt-1">
-        </div>
+		   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 title-font leading-none fill-current cursor-pointer transition duration-300 text-gray-500 hover:text-gray-700" viewBox="0 0 60 60" @click="open = !open" @click.away="open = false" :class="{'transform transition duration-300 text-gray-700': open}" x-transition:enter-end="transform duration-300 opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/></svg>
+
 		</div>
           </div>
 	  
