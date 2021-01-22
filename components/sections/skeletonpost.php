@@ -6,7 +6,7 @@
                         <span class="text-3xl"></span>
                      </div>
                   </div>  
-  <div class="bg-white md:w-3/5 p-6 rounded-lg shadow-sm">
+  <div class="bg-white md:w-3/5 p-6 md:rounded-lg shadow-sm">
   
   
 
