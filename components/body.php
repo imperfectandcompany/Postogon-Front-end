@@ -4,7 +4,7 @@
 			
             <!-- SORT BY -->
 			<?php section("sortby"); ?>			
-			
+		
             <!-- POST -->
 			<?php section("skeletonpost"); ?>
 			<?php section("post"); ?>

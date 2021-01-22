@@ -3,6 +3,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
 
+
+
 <!-- This is an example component -->
 <div
       class="bg-grayDark"
@@ -14,6 +16,8 @@
       class="w-full text-gray-700 bg-white h-16 fixed top-0 animated z-40"
       x-bind:class='{ "bg-black shadow-lg": !atTop }'
     >
+	
+	
       <div
         x-data="{ open: false }"
         class="flex flex-col max-w-screen-xl px-2 mx-auto md:items-center md:justify-between md:flex-row"
@@ -29,54 +33,65 @@
   
 		  
           </a>
+		  
+		  
           <!-- Button Mobile Nav -->
           <button
             class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
 			@click.away="open = false"
+			class="relative"
             @click="open = !open"
+
           >
             <span class="text-lg text-primary"
               ><i class="fas fa-bell"></i
             ></span>
           </button>
+		  
+		  
           <!-- End Button Mobile Nav -->
         </div>
+		        <div class="absolute"> <input type="text" class="h-14 w-72 pl-5 pr-5 rounded z-0 focus:outline-none" placeholder="Search anything...">
+            <div class="absolute top-4 right-3"><i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i> </div>
+        </div>		
         <!-- Navbar Mobile -->
         <nav
           :class="{'flex': open, 'hidden': !open}"
+		  
           class=" flex-grow relative hidden bg-white shadow-lg rounded-b"
         >
+	
             <div
               x-show="open"
               x-transition:enter="transition ease-out duration-100"
               x-transition:enter-start="transform opacity-0 scale-95"
               x-transition:enter-end="transform opacity-100 scale-100"
-              x-transition:leave="transition ease-in duration-75"
+              x-transition:leave="transition ease-in duration-100"
               x-transition:leave-start="transform opacity-100 scale-100"
               x-transition:leave-end="transform opacity-0 scale-95"
               class="absolute right-0 origin-top transition shadow-lg md:w-48"
             >
 
             <div class="bg-white  shadow-lg">
-                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg transition hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
+                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg  hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
                     <img class="h-8 w-8 rounded-full object-cover mx-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Sarah_Palin_by_Gage_Skidmore_2.jpg/220px-Sarah_Palin_by_Gage_Skidmore_2.jpg" alt="avatar">
                     <p class="text-gray-600 text-sm mx-2">
                         <span class="font-bold" href="#">Sarah Palin</span> liked your comment <span class="font-bold text-blue-500" href="#">sarah fell off</span> <div class="ml-auto">2m</div>
                     </p>
                 </a>
-                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg transition hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
+                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg  hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
                     <img class="h-8 w-8 rounded-full object-cover mx-1" src="https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2020/3/6/8e2e4e604117477a9621dafd02f2abd7_18.jpg" alt="avatar">
                     <p class="text-gray-600 text-sm mx-2">
                         <span class="font-bold" href="#">Joe Biden</span> start following you. <div class="ml-auto">45m</div>
                     </p>
                 </a>
-                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg transition hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
+                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg  hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
                     <img class="h-8 w-8 rounded-full object-cover mx-1" src="https://static01.nyt.com/images/2021/01/20/multimedia/20xp-trumppardonslist-BANNON2/20xp-trumppardonslist-BANNON2-mediumSquareAt3X.jpg" alt="avatar">
                     <p class="text-gray-600 text-sm mx-2">
                         <span class="font-bold" href="#">Not Trump</span> liked your comment <span class="font-bold text-blue-500" href="#">I wonder if Trump made a new acc...</span> <div class="ml-auto">1h</div>
                     </p>
                 </a>
-                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg transition hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
+                <a href="#" class="flex items-center px-4 py-3 border-b rounded-lg  hover:bg-gray-100 hover:shadow-sm hover:underline -mx-2">
                     <img class="h-8 w-8 rounded-full object-cover mx-1" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg" alt="avatar">
                     <p class="text-gray-600 text-sm mx-2">
                         <span class="font-bold" href="#">Barack Obama</span> start following you. <div class="ml-auto">3h</div>

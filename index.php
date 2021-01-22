@@ -15,8 +15,6 @@
 		 <?php view("body");?>
 
 		 
-		 
-
 			
          <!-- Footer -->
          <?php view("footer");?>
