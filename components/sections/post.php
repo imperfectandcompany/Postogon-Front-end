@@ -1,11 +1,10 @@
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-
-<div  class="flex mb-6">
-                  <div class="w-1/5 text-center py-8">
-                     <div class="text-grey-darker px-2 mb-2">
+<div class="hidden" id="normalpost">
+<div  class="flex-none md:flex md:mb-6">
+                  <div class="md:w-1/5 text-center py-3">
+                     <div class="">
                         <span class="text-3xl"></span>
                      </div>
-                  </div>
+                  </div>  
   <div class="bg-white md:w-3/5 p-6 rounded-lg shadow-sm">
   
     <div class="flex">
@@ -73,6 +72,10 @@
     <div class="mt-4 mb-4">
       <p class="text-gray-600 pl-5  text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
         cursus ornare nibh, sit
       </p>
     </div>
@@ -136,9 +139,10 @@
 	
   </div>
   
-                  <div class="w-1/5 text-center py-8">
-                     <div class="text-grey-darker px-2 mb-2">
+                  <div class="md:w-1/5 text-center py-3">
+                     <div class="">
                         <span class="text-3xl"></span>
                      </div>
                   </div>  
+</div>
 </div>
