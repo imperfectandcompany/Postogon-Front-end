@@ -6,35 +6,13 @@
                      </div>
                   </div>  
 				  
-  <div class="bg-white md:w-3/5 p-6 md:rounded-lg transition shadow-sm">
+  <div class="bg-white md:w-3/5 p-6 rounded-lg transition shadow-sm">
     <div class="flex">
 	
 	
       <div x-data="{ open: false }">
         <div class="cursor-pointer w-10 h-10 bg-gray-700 transition hover:bg-gray-600 border-4 border-gray-500 text-center font-bold text-white bg-cover bg-center rounded-full mr-3 shadow-inner" @click="open = !open" @click.away="open = false" :class="{'border-indigo-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" style="background-image: url('')"><div class="my-1 select-none">?</div>
-		</div>
-        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute w-60 px-5 py-3 dark:bg-gray-800 bg-white opacity-100 rounded-lg shadow border dark:border-transparent mt-5">
-          <ul class="space-y-3 dark:text-white">
-            <li class="font-medium">
-              <a href="#" class="flex no-select items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
-                <div class="mr-3">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                </div>
-                <div class="select-none">Profile</div>
-              </a>
-            </li>
-
-            <hr class="dark:border-gray-700">
-            <li class="font-medium">
-              <a href="#" class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-red-600">
-                <div class="mr-3 text-red-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                </div>
-                <div class="select-none">Block</div>
-              </a>
-            </li>
-          </ul>
-        </div>		
+		</div>	
       </div>
 	  
 

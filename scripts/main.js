@@ -16,6 +16,15 @@ for (var i = 0; i < divs.length; i++) {
     divs[i].classList.add('hidden');
 }
 
+
+	const div = document.querySelectorAll("div.skeleton");
+for (var i = 0; i < div.length; i++) {
+	//i is index of each, it loops until its empty
+    div[i].classList.remove('container');
+    div[i].classList.add('overflow-y-scroll');	
+}
+
+
 	var divs = document.querySelectorAll('#normalpost');
 for (var i = 0; i < divs.length; i++) {
 	//i is index of each, it loops until its empty

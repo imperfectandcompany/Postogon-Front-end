@@ -5,19 +5,20 @@
 <html lang="en">
 <!-- head -->
    <?php view("head"); ?>
-   <body>
+   <body class="overflow-hidden">
 
-      <div class="font-sans bg-gray-100 flex flex-col min-h-screen w-full">
+      <div class="font-sans bg-gray-100 ">
 	  		 <?php view("nav");?>
          <!-- body -->
 	 
 		 
-		 <?php view("body");?>
+
 
 		 
+		 
+
 			
-         <!-- Footer -->
-         <?php view("footer");?>
+
 		 
          <!-- control panel -->
          <?php view("control");?>	  

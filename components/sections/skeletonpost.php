@@ -1,5 +1,5 @@
 <div id="skeletonpost">
-<div class="flex-none md:flex md:mb-6">
+<div  class="flex-none  md:flex md:mb-6">
 
                   <div class="md:w-1/5 text-center py-3 md:mb-8">
                      <div class="">
