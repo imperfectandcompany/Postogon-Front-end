@@ -1,12 +1,12 @@
 <div class="hidden" id="normalpost">
-<div  class="flex-none md:flex md:mb-6">
-                  <div class="md:w-1/5 text-center py-3">
+<div  class="flex-none md:flex md:mb-6 ">
+                  <div class="md:w-1/5 text-center py-3 flex-shrink-0">
                      <div class="">
                         <span class="text-3xl"></span>
                      </div>
                   </div>  
 				  
-  <div class="bg-white md:w-3/5 p-6 rounded-lg transition shadow-sm">
+  <div class="bg-white md:w-3/5 p-6 rounded-lg transition shadow-sm ">
     <div class="flex">
 	
 	
@@ -19,8 +19,8 @@
 	  
       <div>
 
-		  <div class="flex items-center">
-        <p class="text-blue-500 mr-1 font-bold">Profile</p><svg xmlns="http://www.w3.org/2000/svg" class="h-6 py-1 title-font leading-none fill-current cursor-pointer transition text-gray-500 hover:text-gray-700" viewBox="1 -18 511.999 511">
+		  <div class="flex items-center duration-500 transition transform hover:-translate-y-1">
+        <p class="text-blue-500 mr-1 cursor-pointer font-bold hover:underline">Profile</p><svg xmlns="http://www.w3.org/2000/svg" class="h-6 py-1 title-font leading-none fill-current cursor-pointer transition text-gray-500 hover:text-gray-700" viewBox="1 -18 511.999 511">
   <defs/>
   <path d="M208.113 319.57c0 11.371 9.246 20.618 20.617 20.618h94.934c11.371 0 20.621-9.25 20.621-20.618v-95.554H208.113zm53.086-52.558c0-8.285 6.715-15 15-15 8.281 0 15 6.715 15 15v30.18c0 8.285-6.719 15-15 15-8.285 0-15-6.715-15-15zm0 0"/>
   <path d="M442.973 70.082C398.433 25.211 339.203.5 276.199.5c-63.004 0-122.234 24.71-166.777 69.582-44.512 44.84-69.024 104.453-69.024 167.856 0 36.714 8.512 73.175 24.664 105.828-7.738 29.07-28.375 53.222-56.03 65.226-7.598 3.297-11.087 12.133-7.79 19.73.66 1.52 1.54 2.872 2.586 4.04 19.942 22.836 48.676 35.925 78.867 35.925 26.508 0 51.739-10.007 71-27.828 36.86 22.621 78.946 34.516 122.504 34.516 63.004 0 122.235-24.71 166.774-69.582C487.484 360.953 512 301.34 512 237.937s-24.516-123.015-69.027-167.855zM374.285 319.57c0 27.914-22.707 50.618-50.62 50.618H228.73c-27.91 0-50.617-22.708-50.617-50.618V214.762c0-11.438 9.305-20.746 20.746-20.746h17.172v-40.164c0-33.176 26.992-60.168 60.168-60.168 33.172 0 60.164 26.992 60.164 60.168v40.164h17.176c11.438 0 20.746 9.308 20.746 20.746zm0 0"/>
@@ -48,13 +48,12 @@
 	  
     </div>
     <div class="mt-4 mb-4">
-      <p class="text-gray-600 pl-5  text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        cursus ornare nibh, sit
+      <p x-data="{length: 25}"
+   x-init="originalContent = $el.firstElementChild.textContent.trim()" class="text-gray-600 pl-5 break-words text-sm antialiased sm:subpixel-antialiased md:antialiased">
+        <span x-text="originalContent.slice(0, length)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+		<button class="text-blue-600" x-cloak  @click="length = undefined"  x-show="length"><div class="text-gray-600">...</div>read more</button>
+		<button class="text-blue-600 hidden" x-cloak @click="length = 25" "><div class="text-gray-600">...</div>view less</button>		
+
       </p>
     </div>
 	
@@ -65,13 +64,7 @@
         <p class="mt-1">Yale '22, Studying Engineering 💻</p>
       </div>
 	    </div>
-	         <div class="mt-4 ml-2 flex items-center">
-            <div class="flex font-semibold text-gray-700 mr-auto text-sm ">
-               <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
-                </svg>
-               <span>Share</span>
-            </div>		
+	         <div class="mt-4 ml-2 flex items-center">	
             <div class="flex mr-2 text-gray-700 text-sm mr-3">
                <svg fill="none" viewBox="0 0 24 24"  class="w-4 h-4 mr-1" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -84,6 +77,12 @@
                </svg>
                <span>8</span>
             </div>
+            <div class="flex font-bold text-blue-500 ml-auto text-sm cursor-pointer duration-500 transition transform hover:-translate-y-1">
+               <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+               <span>Share</span>
+            </div>				
          </div>	
 
 
@@ -117,7 +116,7 @@
 	
   </div>
   
-                  <div class="md:w-1/5 text-center py-3">
+                  <div class="md:w-1/5 text-center py-3 flex-shrink-0">
                      <div class="">
                         <span class="text-3xl"></span>
                      </div>

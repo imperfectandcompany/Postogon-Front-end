@@ -1,16 +1,19 @@
-    <div class="flex-grow skeleton container  mx-auto px-4" id="timeline-scroll">
+    <div class="skeleton px-4" id="timeline-scroll">
 			<!-- CREATE A POST -->
 			<?php section("createpost"); ?>
 		
+		<div class="z-40">
             <!-- SORT BY -->
 			<?php section("sortby"); ?>			
-		
+		</div>
+		<div class="z-10">
             <!-- POST -->
 			<?php section("skeletonpost"); ?>
 			<?php section("post"); ?>
             <!-- POST -->
 			<?php section("skeletonpost"); ?>			
 			<?php section("post"); ?>		
+			</div>
 
 
 

@@ -158,7 +158,7 @@
 			<ul class="flex items-center mx-auto ">
 				<!-- top bar center -->
 				<li>
-					     <div class="relative text-gray-600">
+					     <div class="relative text-gray-600" style="-webkit-transform: translate3d(0,0,0)">
         <input class="border-2 border-gray-300 bg-gray-100 focus:border-gray-600 bg-white h-7 md:h-10 px-5 pr-8 rounded-lg text-sm focus:outline-none"
           name="search" placeholder="Search">
         <button type="submit" class="absolute right-0 top-0 mt-2 md:mt-3 mr-4">
@@ -199,6 +199,13 @@
       <div x-data="{ open: false }">
         <div class="cursor-pointer w-6 h-6 bg-gray-700 transition hover:bg-gray-600 border-2 border-gray-500 text-center font-semibold text-white bg-cover bg-center rounded-full mr-3 shadow-inner" @click="open = !open" @click.away="open = false" :class="{'border-indigo-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" style="background-image: url('')"><div class="-my-0.5 select-none">?</div>
 		</div>	
+		              <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
+                <div class="py-1 rounded-md bg-white shadow-xs">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                </div>
+              </div>
       </div>
 				</li>
 
@@ -320,5 +327,4 @@
 		</a>
 
 	</nav>
-
 </div>
