@@ -1,1 +1,0 @@
-                        <span class="text-gray-500 pl-20">20 September at 10:47 PM</span>
