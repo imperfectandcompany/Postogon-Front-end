@@ -1,4 +1,8 @@
 <?php
+function createpost(){
+    include_once("createpost.php");
+}
+
 function post($amt){
     $i = 0;
 
@@ -35,17 +39,22 @@ while ($i < $amt){
 </head>
 <body>
 <div :class="{ 'dark': isDark}" x-data="setup()" x-init="$refs.loading.classList.add('hidden'); setColors(color);">
-    <div class="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
+    <div class="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-darker dark:text-light">
         <!-- Loading screen -->
         <div
-                class="fixed inset-0 z-50 flex items-center justify-center text-2xl font-semibold text-white bg-primary-darker"
+                class="fixed inset-0 z-50 flex items-center w-full justify-center animate-pulse text-2xl font-semibold text-white bg-primary-darker"
                 x-ref="loading"
         >
-            Loading.....
+            <img
+                    class="h-32 w-32 mx-auto"
+                    style="filter:brightness(0.1)"
+                    src="https://postogon.com/home/assets/logo.svg"
+                    alt="postogon logo" />
+            <div class="h-16 flex items-center mx-auto">Loading.....</div>
         </div>
 
         <!-- Sidebar -->
-        <aside class="flex-shrink-0 hidden w-64 bg-white border-r border-b dark:border-primary-darker dark:bg-darker md:block">
+        <aside class="flex-shrink-0 hidden w-64 bg-white shadow dark:bg-darker md:block">
             <div class="flex flex-col h-full">
                 <!-- Sidebar links -->
                 <nav aria-label="Main" class="flex-1 px-2 py-4 space-y-2 overflow-y-hidden hover:overflow-y-auto">
@@ -137,8 +146,8 @@ while ($i < $amt){
 
         <div class="flex flex-col flex-1 min-h-screen overflow-x-hidden overflow-y-auto">
             <!-- Navbar -->
-            <header class="relative bg-white dark:bg-darker">
-                <div class="flex items-center justify-between p-2 border-b dark:border-primary-darker">
+            <header class="relative bg-white shadow dark:bg-dark">
+                <div class="flex items-center justify-between p-2">
                     <!-- Mobile menu button -->
                     <button
                             @click="isMobileMainMenuOpen = !isMobileMainMenuOpen"
@@ -624,49 +633,21 @@ while ($i < $amt){
             </header>
 
             <!-- Main content -->
-            <div class="flex justify-center flex-1 h-full p-4">
-                <main class="mb-16 space-y-4">
+            <div class="flex justify-center flex-1 h-full">
+                <main class="border-t z border-gray-100 dark:border-primary-light ">
                     <!-- Content header -->
-                    <!-- create a post -->
-                    <p class="px-4 py-2 text-xl font-medium text-white rounded-md bg-primary dark:bg-dark">
-                        Create a post
+                    <p class="px-4 py-2 text-xl font-medium text-light rounded-md">
+                        Home
                     </p>
-                    <div class="px-6 py-6 transition bg-white rounded-lg shadow-sm dark:bg-darker">
-                        <div class="" x-data="{ count: 0 }" x-init="count = $refs.countme.value.length">
-                            <div class="flex flex-col">
-                                <div class="flex">
-                                    <div class="my-auto">
-                                        <div class="w-10 h-10 mr-3 font-bold text-center text-white transition bg-gray-700 bg-center bg-cover border-4 border-gray-500 rounded-full shadow-inner" style="background-image: url('')" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><div class="my-1 select-none">?</div>
-                                        </div>
-                                    </div>
-                                    <textarea class="w-full p-2 bg-white border rounded-lg dark:bg-dark dark:border-transparent dark:text-light focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-10 char-limiter" maxlength="280" placeholder="What's Poppin'?" rows="3" x-on:keyup="count = $refs.countme.value.length" x-ref="countme"></textarea>
-                                </div>
-                                <!-- icons -->
-                                <div class="flex m-2 text-gray-500 icons ml-14">
-                                    <svg class="p-1 mr-2 transition-colors duration-200 rounded-full cursor-pointer text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
-                                    <svg class="p-1 mr-2 transition-colors duration-200 rounded-full cursor-pointer text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
-                                    <svg class="p-1 mr-2 transition-colors duration-200 rounded-full cursor-pointer text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg>
-                                    <div class="ml-auto text-xs font-semibold text-gray-400 count">
-                                        <span x-html="count"></span> / <span x-html="$refs.countme.maxLength"></span>
-                                    </div>
-                                </div>
-                                <!-- buttons -->
-                                <div class="flex flex-row-reverse buttons">
-                                    <div class="p-1 px-4 ml-2 mr-2 font-semibold text-white transition transition-colors bg-red-500 rounded-md cursor-pointer btn duration-200l text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker">Post</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- create a post -->
+                    <?php createpost(); ?>
 
 
 
                     <!-- Content -->
-                    <p class="px-4 py-2 text-xl font-medium text-white rounded-md bg-primary dark:bg-dark">
-                        Feed
-                    </p>
                     <!-- skeleton loading post -->
                     <!-- post -->
-                    <?php post(6); ?>
+                    <?php post(5); ?>
 
 
 
@@ -677,22 +658,7 @@ while ($i < $amt){
 
 
             </div>
-            <section class="fixed inset-x-0 bottom-0 z-10 w-full bg-white shadow md:hidden dark:bg-dark" id="bottom-navigation">
-                <div class="flex justify-between" id="tabs">
-                    <a class="justify-center inline-block w-full pt-2 pb-1 text-center focus:text-teal-500 hover:text-teal-500" href="/">
-                        <svg class="inline-block mb-1" height="25" viewBox="0 0 42 42" width="25">
-                            <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
-                                <path d="M21.0847458,3.38674884 C17.8305085,7.08474576 17.8305085,10.7827427 21.0847458,14.4807396 C24.3389831,18.1787365 24.3389831,22.5701079 21.0847458,27.6548536 L21.0847458,42 L8.06779661,41.3066256 L6,38.5331279 L6,26.2681048 L6,17.2542373 L8.88135593,12.4006163 L21.0847458,2 L21.0847458,3.38674884 Z" fill="currentColor" fill-opacity="0.1"></path>
-                                <path d="M11,8 L33,8 L11,8 Z M39,17 L39,36 C39,39.3137085 36.3137085,42 33,42 L11,42 C7.6862915,42 5,39.3137085 5,36 L5,17 L7,17 L7,36 C7,38.209139 8.790861,40 11,40 L33,40 C35.209139,40 37,38.209139 37,36 L37,17 L39,17 Z" fill="currentColor"></path>
-                                <path d="M22,27 C25.3137085,27 28,29.6862915 28,33 L28,41 L16,41 L16,33 C16,29.6862915 18.6862915,27 22,27 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"></path>
-                                <rect fill="currentColor" height="2" rx="1" transform="translate(32.000000, 11.313708) scale(-1, 1) rotate(-45.000000) translate(-32.000000, -11.313708) " width="30" x="17" y="10.3137085"></rect>
-                                <rect fill="currentColor" height="2" rx="1" transform="translate(12.000000, 11.313708) rotate(-45.000000) translate(-12.000000, -11.313708) " width="30" x="-3" y="10.3137085"></rect>
-                            </g>
-                        </svg>
-                        <span class="block text-xs tab tab-home">Home</span>
-                    </a>
-                </div>
-            </section>
+
         </div>
         <div class="fixed flex flex-col-reverse w-12 h-12 bg-white rounded-full shadow cursor-pointer right-6 bottom-20 bg-primary-100 dark:bg-primary"><svg class="w-8 h-8 mx-auto mb-1 text-primary-lighter dark:text-primary" viewBox="0 0 24 24"><g><path d="M8.8 7.2H5.6V3.9c0-.4-.3-.8-.8-.8s-.7.4-.7.8v3.3H.8c-.4 0-.8.3-.8.8s.3.8.8.8h3.3v3.3c0 .4.3.8.8.8s.8-.3.8-.8V8.7H9c.4 0 .8-.3.8-.8s-.5-.7-1-.7zm15-4.9v-.1h-.1c-.1 0-9.2 1.2-14.4 11.7-3.8 7.6-3.6 9.9-3.3 9.9.3.1 3.4-6.5 6.7-9.2 5.2-1.1 6.6-3.6 6.6-3.6s-1.5.2-2.1.2c-.8 0-1.4-.2-1.7-.3 1.3-1.2 2.4-1.5 3.5-1.7.9-.2 1.8-.4 3-1.2 2.2-1.6 1.9-5.5 1.8-5.7z"></path></g></svg></div>
 

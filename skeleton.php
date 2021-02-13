@@ -1,4 +1,4 @@
-<div class="bg-white dark:bg-darker px-4 py-4  rounded-lg transition shadow-sm " id="skeletonpost">
+<div class="bg-white dark:bg-darker px-4 py-4  transition shadow-sm " id="skeletonpost">
     <div class="flex">
         <!-- profile picture -->
         <div class="w-10 h-10 animate-pulse bg-gray-200 dark:bg-dark border-4 border-gray-300 dark:border-darker text-center font-bold text-white bg-cover bg-center rounded-full mr-3 shadow-inner" style="background-image: url('')">
