@@ -1,17 +1,22 @@
-                    <div class="px-6 py-6 border-l transition bg-white mb-2 shadow-sm dark:bg-dark">
-                        <div class="" x-data="{ count: 0, text: '' }" >
+                    <div  class="px-6 py-6 border border-l transition bg-white mb-2 shadow-sm dark:bg-dark">
+                        <div class="" x-data="{ count: 0 } " x-init="count = $refs.countme.value.length">
                             <div class="flex flex-col">
-                                <div class="flex ">
-                                <div class="my-auto">
-                                    <div class="w-10 h-10 mr-3  left-0 top-0 right-0 bottom-0 font-bold text-center text-white transition bg-gray-700 bg-center bg-cover border-4 border-gray-500 rounded-full shadow-inner" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><div class="my-1 select-none">?</div>
+                                <div class="flex" >
+                                    <div class="my-auto">
+                                        <div class="w-10 h-10 mr-3 font-bold text-center text-white transition bg-gray-700 bg-center bg-cover border-4 border-gray-500 rounded-full shadow-inner" style="background-image: url('')" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><div class="my-1 select-none">?</div>
+                                        </div>
                                     </div>
+                                    <textarea class="w-full h-6 transition p-2 bg-white border rounded-lg dark:bg-dark dark:border-transparent dark:text-light focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-10 char-limiter" maxlength="280" placeholder="What's Poppin'?" rows="3" x-on:keyup="count = $refs.countme.value.length" x-ref="countme"></textarea>
                                 </div>
-                                <div class="w-full relative p-2 flex-grow-0" >
-                                    <div x-text="text" class="text-sm whitespace-pre-line w-full"></div>
-                                    <textarea x-model="text" rows="1" class="flex-grow-0 text-sm absolute w-full left-0 top-0 right-0 bottom-0 overflow-y-hidden" maxlength="280" placeholder="What's Poppin'?"  x-on:keyup="count = $refs.countme.value.length" x-ref="countme"></textarea>
-                                </div>
-                                </div>
-
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script>
+    $('textarea').each(function () {
+        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+    }).on('input', function () {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+</script>
 
 
 
@@ -31,4 +36,3 @@
                             </div>
                         </div>
                     </div>
-
