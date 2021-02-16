@@ -1,4 +1,4 @@
-                    <div  class="px-6 py-6 border border-l transition bg-white mb-2 shadow-sm dark:bg-dark">
+                    <div  class="px-4 py-4 border-b dark:border-darker transition bg-white shadow-sm dark:bg-dark">
                         <div class="" x-data="{ count: 0 } " x-init="count = $refs.countme.value.length">
                             <div class="flex flex-col">
                                 <div class="flex" >
@@ -6,7 +6,7 @@
                                         <div class="w-10 h-10 mr-3 font-bold text-center text-white transition bg-gray-700 bg-center bg-cover border-4 border-gray-500 rounded-full shadow-inner" style="background-image: url('')" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"><div class="my-1 select-none">?</div>
                                         </div>
                                     </div>
-                                    <textarea class="w-full h-6 transition p-2 bg-white border rounded-lg dark:bg-dark dark:border-transparent dark:text-light focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-10 char-limiter" maxlength="280" placeholder="What's Poppin'?" rows="3" x-on:keyup="count = $refs.countme.value.length" x-ref="countme"></textarea>
+                                    <textarea id="text" class="w-full text-lg	rounded-md h-6  dark:bg-dark transition p-2 bg-white  resize-none dark:text-light focus:outline-none  focus:ring-opacity-10 char-limiter" maxlength="280" placeholder="What's Poppin'?" rows="3" x-on:keyup="count = $refs.countme.value.length" x-ref="countme"></textarea>
                                 </div>
                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script>
@@ -16,7 +16,20 @@
         this.style.height = 'auto';
         this.style.height = (this.scrollHeight) + 'px';
     });
+    $("#ready").hide();
+
+    $('#text').on('input propertychange', function () {
+        if ($(this).val() !== "") {
+            $("#submitpost").removeClass("p-1 px-4 font-semibold text-white transition transition-colors bg-red-500 rounded-md btn duration-200l text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker");
+            $("#submitpost").addClass("p-1 px-4 font-semibold text-white transition transition-colors bg-red-500 rounded-md cursor-pointer btn duration-200l text-primary-lighter bg-primary-100 hover:text-primary hover:bg-primary dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker");
+        }
+        else {
+            $("#submitpost").removeClass("p-1 px-4 font-semibold text-white transition transition-colors bg-red-500 rounded-md cursor-pointer btn duration-200l text-primary-lighter bg-primary-100 hover:text-primary hover:bg-primary dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker");
+            $("#submitpost").addClass("p-1 px-4 font-semibold text-white transition transition-colors bg-red-500 rounded-md btn duration-200l text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker");
+        }
+    });
 </script>
+
 
 
 
@@ -31,8 +44,7 @@
                                 </div>
                                 <!-- buttons -->
                                 <div class="flex flex-row-reverse buttons">
-                                    <div class="p-1 px-4 ml-2 mr-2 font-semibold text-white transition transition-colors bg-red-500 rounded-md cursor-pointer btn duration-200l text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker">Post</div>
-                                </div>
+                                    <div id="submitpost" class="p-1 px-4 font-semibold text-white transition select-none transition-colors bg-red-500 rounded-md btn duration-200l text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-darker focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker">Post</div></div>
                             </div>
                         </div>
                     </div>

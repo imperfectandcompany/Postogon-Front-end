@@ -4,13 +4,13 @@
   --dark: #2c2f33;
   --darker: #23272a;
   /*  */
-  --color-primary: var(--color-cyan);
-  --color-primary-50: var(--color-cyan-50);
-  --color-primary-100: var(--color-cyan-100);
-  --color-primary-light: var(--color-cyan-light);
-  --color-primary-lighter: var(--color-cyan-lighter);
-  --color-primary-dark: var(--color-cyan-dark);
-  --color-primary-darker: var(--color-cyan-darker);
+  --color-primary: var(--color-red);
+  --color-primary-50: var(--color-red-50);
+  --color-primary-100: var(--color-red-100);
+  --color-primary-light: var(--color-red-light);
+  --color-primary-lighter: var(--color-red-lighter);
+  --color-primary-dark: var(--color-red-dark);
+  --color-primary-darker: var(--color-red-darker);
   /*  */
   --color-red: #dc2626;
   --color-red-50: #fef2f2;
@@ -731,6 +731,34 @@ video {
   background-color: var(--color-primary-darker);
 }
 
+.bg-green-darker {
+  background-color: var(--color-green-darker);
+}
+
+.bg-green-100 {
+  background-color: var(--color-green-100);
+}
+
+.bg-green-lighter {
+  background-color: var(--color-green-lighter);
+}
+
+.bg-green-light {
+  background-color: var(--color-green-light);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-green-50 {
+  background-color: var(--color-green-50);
+}
+
+.bg-green-dark {
+  background-color: var(--color-green-dark);
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -747,6 +775,11 @@ video {
 
 .hover\:bg-primary-dark:hover {
   background-color: var(--color-primary-dark);
+}
+
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
 .focus\:bg-primary-100:focus {
@@ -769,6 +802,10 @@ video {
   background-color: var(--color-primary-lighter);
 }
 
+.dark .dark\:bg-green-lighter {
+  background-color: var(--color-green-lighter);
+}
+
 .dark .dark\:bg-primary-darker {
   background-color: var(--color-primary-darker);
 }
@@ -784,6 +821,9 @@ video {
 .dark .dark\:focus\:bg-primary-dark:focus {
   background-color: var(--color-primary-dark);
 }
+
+
+
 
 .bg-center {
   background-position: center;
@@ -854,6 +894,10 @@ video {
   border-color: rgba(55, 65, 81, var(--tw-border-opacity));
 }
 
+.dark .dark\:border-light {
+  border-color: var(--light);
+}
+
 .dark .dark\:border-darker {
   border-color: var(--darker);
 }
@@ -892,6 +936,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-4 {
@@ -972,10 +1020,6 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
 }
 
 .flex-shrink-0 {
@@ -1126,6 +1170,10 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1263,6 +1311,10 @@ video {
 
 .overflow-y-hidden {
   overflow-y: hidden;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .overflow-y-scroll {
@@ -1404,10 +1456,6 @@ video {
 
 .right-0 {
   right: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .left-0 {
@@ -1589,6 +1637,10 @@ video {
   color: var(--light);
 }
 
+.text-dark {
+  color: var(--dark);
+}
+
 .text-primary-100 {
   color: var(--color-primary-100);
 }
@@ -1679,6 +1731,10 @@ video {
   color: var(--color-primary-100);
 }
 
+.dark .dark\:hover\:text-primary-lighter:hover {
+  color: var(--color-primary-lighter);
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1711,15 +1767,6 @@ video {
 
 .invisible {
   visibility: hidden;
-}
-
-.whitespace-pre-line {
-  white-space: pre-line;
-}
-
-.break-normal {
-  overflow-wrap: normal;
-  word-break: normal;
 }
 
 .break-words {
@@ -1868,8 +1915,16 @@ video {
   --tw-translate-y: 0px;
 }
 
+.translate-y-3 {
+  --tw-translate-y: 0.75rem;
+}
+
 .translate-y-px {
   --tw-translate-y: 1px;
+}
+
+.-translate-y-3 {
+  --tw-translate-y: -0.75rem;
 }
 
 .-translate-y-px {
@@ -2057,6 +2112,10 @@ video {
     align-items: center;
   }
 
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
   .md\:p-8 {
     padding: 2rem;
   }
@@ -2064,10 +2123,6 @@ video {
   .md\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  .md\:break-all {
-    word-break: break-all;
   }
 }
 
